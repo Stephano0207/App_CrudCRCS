@@ -8,16 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'usuarios/create',
     pathMatch: 'full'
   },
   {
     path: 'usuarios/create',
     loadChildren: () => import('./usuarios/create/create.module').then( m => m.CreatePageModule)
-  },
-  {
-    path: 'usuarios/edit/:id',
-    loadChildren: () => import('./usuarios/edit/edit.module').then( m => m.EditPageModule)
   },
   {
     path: 'alumnos/edit/:id',
